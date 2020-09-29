@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--主配置文件,一般包含其他的配置文件-->
+<!--    <import resource="classpath:ba06/spring-school.xml"></import>
+    <import resource="classpath:ba06/spring-student.xml"></import>-->
+<!--或者使用通配符(*)-->
+    <import resource="classpath:ba06/spring-*.xml"></import>
+</beans>

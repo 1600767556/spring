@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <bean id="myStudent" class="com.bjpowernode.ba02.Student">
+      <property name="age" value="22"></property>
+      <property name="name" value="海问香"></property>
+      <property name="school" ref="mySchool"></property>
+  </bean>
+    <bean id="mySchool" class="com.bjpowernode.ba02.School">
+        <property name="name" value="路村小学"></property>
+        <property name="address" value="路村庄"></property>
+    </bean>
+</beans>

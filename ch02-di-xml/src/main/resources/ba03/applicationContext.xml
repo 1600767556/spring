@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--使用name属性构造注入-->
+    <bean id="myStudent" class="com.bjpowernode.ba03.Student">
+        <constructor-arg name="name" value="张三"></constructor-arg>
+        <constructor-arg name="age" value="18"></constructor-arg>
+        <constructor-arg name="school" ref="mySchool"></constructor-arg>
+    </bean>
+    <bean id="mySchool" class="com.bjpowernode.ba03.School">
+        <property name="name" value="路村小学"></property>
+        <property name="address" value="路村庄"></property>
+    </bean>
+    <!--使用index属性实现构造注入-->
+    <bean id="myStudent2" class="com.bjpowernode.ba03.Student">
+        <constructor-arg index="0" value="李四"></constructor-arg>
+        <constructor-arg index="1" value="16"></constructor-arg>
+        <constructor-arg index="2"  ref="mySchool"></constructor-arg>
+
+    </bean>
+    <!--省略index-->
+    <bean id="myStudent3" class="com.bjpowernode.ba03.Student">
+        <constructor-arg  value="李四"></constructor-arg>
+        <constructor-arg  value="16"></constructor-arg>
+        <constructor-arg   ref="mySchool"></constructor-arg>
+
+    </bean>
+    <!--创建file构造注入-->
+    <bean id="myfile" class="java.io.File">
+    <constructor-arg name="parent" value="E:\BaiduNetdiskDownload\Spring\reamme.txt"></constructor-arg>
+    <constructor-arg name="child" value="readme.txt"></constructor-arg>
+    </bean>
+
+</beans>
